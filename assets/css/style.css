@@ -1,0 +1,50 @@
+.item-a {
+    grid-area: header;
+    border-bottom: red 1px solid;
+}
+
+.item-b {
+    grid-area: menu;
+    border: red solid 1px;
+}
+
+.item-c {
+    grid-area: main;
+    border: red solid 1px;
+}
+
+.item-d {
+    grid-area: right;
+    border: red solid 1px;
+}
+
+.item-e {
+    grid-area: footer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1FR);
+    grid-row: auto;
+    background-color: lightcoral;
+    grid-template-areas:
+        "header header header header header"
+        "menu main main right right"
+        "menu footer footer footer footer";
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1FR;
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+            "right"
+            "footer";
+        text-align: center;
+    }
+
+}
